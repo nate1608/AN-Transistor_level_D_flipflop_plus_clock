@@ -25,14 +25,13 @@ The final circuit consists of two main stages: the D flip-flop and the clock gen
 #### 1. D Flip-Flop (3-BJT Design)
 Instead of a complex design requiring 10-11 transistors for individual logic gates, an optimized architecture based on an SR latch was implemented using only **three BC547B (NPN) BJT transistors**. This design minimizes component count and potential sources of error.
 
-*(Insert your D Flip-Flop schematic image here)*
-`![D Flip-Flop Schematic](assets/dff_schematic.png)`
+
+![D Flip-Flop Schematic](Schematics/D_flipflop.png)`
 
 #### 2. Astable Multivibrator (Op-Amp Clock)
 An astable multivibrator was engineered using an **LM741 Op-Amp** to generate a stable **1 kHz square wave**. This design was chosen after an initial BJT-based multivibrator produced a clock signal with insufficient amplitude and poor frequency stability. The Op-Amp version provided a reliable and clean clock signal.
 
-*(Insert your Astable Multivibrator schematic image here)*
-`![Astable Multivibrator Schematic](assets/clock_schematic.png)`
+![Astable Multivibrator Schematic](Schematics/Astable_multibrator_clock.png)`
 
 ---
 
@@ -41,10 +40,13 @@ An astable multivibrator was engineered using an **LM741 Op-Amp** to generate a 
 The integrated circuit was successfully built and tested on a breadboard. The functionality was validated using an oscilloscope, which confirmed that the D flip-flop correctly captured the data input (`Vin`) on the rising edge of the 1 kHz clock signal and held it until the next clock pulse.
 
 #### Output Waveform
-The oscilloscope readings showed the expected behavior: the output (`Vout`) follows the input (`Vin`) but is delayed by one clock cycle.
+The oscilloscope readings showed the expected behavior: the output (`Vout(Purple)`) follows the input (`Vin`) (which is square wave having 2khz frequency with 70% Duty cycle for clear demonstration), the change happens only at Positive edege of the (`clock(Purple)`).
 
-*(Insert your final output waveform image here)*
-`![Output Waveform](assets/output_waveform.png)`
+![Output Waveform](Oscilloscope_output.png)`
+
+#### BreadBoard Implementation
+
+![Breadboard Circuit](Final_circuit.png)`
 
 ---
 
@@ -65,9 +67,9 @@ The oscilloscope readings showed the expected behavior: the output (`Vout`) foll
 
 ### 📁 Files Included
 
--   `Design a D-flip flop using transistors.pptx` – The complete project presentation with schematics, methodology, and results.
--   `/simulation_files` – (Optional) Folder containing the LTspice (`.asc`) simulation files.
-
+-   `Design a D-flip flop using transistors.pdf` – The complete project presentation with schematics, methodology, and results.
+-   `Schematics` - Folder Containing the Circuit schematics of D-flipflop and Astable multivibrator clock.
+  
 ---
 
 ### 🧠 Key Learnings
