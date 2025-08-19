@@ -40,7 +40,7 @@ An astable multivibrator was engineered using an **LM741 Op-Amp** to generate a 
 The integrated circuit was successfully built and tested on a breadboard. The functionality was validated using an oscilloscope, which confirmed that the D flip-flop correctly captured the data input (`Vin`) on the rising edge of the 1 kHz clock signal and held it until the next clock pulse.
 
 #### Output Waveform
-The oscilloscope readings showed the expected behavior: the output (`Vout(Purple)`) follows the input (`Vin`) (which is square wave having 2khz frequency with 70% Duty cycle for clear demonstration), the change happens only at Positive edege of the (`clock(Purple)`).
+The oscilloscope readings showed the expected behavior: the output (`Vout(Purple)`) follows the input (`Vin`) (which is square wave having 2khz frequency with 70% Duty cycle for clear demonstration), the change happens in between two clock cycles (due to our Vin) at Positive edege of the (`Clock(Purple)`).
 
 ![Output Waveform](Oscilloscope_output.png)`
 
